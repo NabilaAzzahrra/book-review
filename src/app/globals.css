@@ -2,32 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* GELEMBUNG */
+
+.bubble-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background-color: #9FCFE7;
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: rise 20s infinite;
+}
+
+.bubble:nth-child(1) {
+  left: 10%;
+  animation-duration: 15s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(2) {
+  left: 20%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(3) {
+  left: 35%;
+  width: 80px;
+  height: 80px;
+  animation-duration: 12s;
+  animation-delay: 6s;
+}
+
+.bubble:nth-child(4) {
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 14s;
+  animation-delay: 8s;
+}
+
+.bubble:nth-child(5) {
+  left: 65%;
+  width: 70px;
+  height: 70px;
+  animation-duration: 20s;
+  animation-delay: 1s;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) scale(1.2);
+    opacity: 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.content {
+  position: relative;
+  z-index: 1;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+
+/* ========= */
