@@ -25,7 +25,7 @@ export default function Page() {
         <div className="bubble"></div>
         <div className="bubble"></div>
       </div>
-      <div className="content gap-5 items-center justify-center h-screen">
+      <div className="content flex flex-col md:flex-row gap-5 items-center justify-center">
         <div className="flex flex-col md:flex-row mt-32 gap-10">
           <div className="flex items-center justify-center">
             <div>
