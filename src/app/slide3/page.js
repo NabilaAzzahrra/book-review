@@ -10,7 +10,7 @@ const poppins = Poppins({
 export default function Page() {
   return (
     <main
-      className={`${poppins.className} relative flex min-h-screen flex-col items-center justify-between p-24`}
+      className={`${poppins.className} relative flex h-screen flex-col items-center justify-between p-24`}
     >
       <div className="background-image"></div>
       <div className="bubble-background">
